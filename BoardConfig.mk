@@ -45,8 +45,10 @@ TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 
 # Kernel
+TARGET_KERNEL_SOURCE := kernel/samsung/piranha
+TARGET_KERNEL_CONFIG := cyanogenmod_superior_defconfig
 TARGET_PREBUILT_KERNEL := device/samsung/superior/kernel
-#BOARD_CUSTOM_BOOTIMG_MK := device/samsung/superior/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/superior/custombootimg.mk
 BOARD_KERNEL_CMDLINE := console=ttyO2,115200n8 mem=1024M androidboot.console=ttyO2 vram=20M omapfb.vram=0:16M
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
